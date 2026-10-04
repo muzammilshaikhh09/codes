@@ -69,4 +69,15 @@ set;
 }
 }
 
+4)
+Open:
+Web.config
+Inside <configuration> add:
+<connectionStrings>
+<add name="StudentConnection"
+connectionString="Data Source=(LocalDB)\MSSQLLocalDB;
+Initial Catalog=StudentDB;
+Integrated Security=True"
+providerName="System.Data.SqlClient"/>
+</connectionStrings>
 
