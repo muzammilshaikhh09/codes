@@ -1,0 +1,72 @@
+Right-click Models folder.
+Select:
+Add → Class
+Name:
+Student.cs
+Write the following code:
+
+1)using System.ComponentModel.DataAnnotations;
+namespace StudentCRUD.Models
+{
+public class Student
+{
+[Key]
+public int StudentId { get; set; }
+[Required]
+[StringLength(50)]
+public string Name { get; set; }
+[Range(18, 60)]
+public int Age { get; set; }
+[StringLength(50)]
+public string Course { get; set; }
+}
+}
+
+2)Class Right-click Models folder.
+Select: 
+Add → Class 
+Name: 
+StudentContext.cs 
+Write: 
+using System.Data.Entity; 
+namespace StudentCRUD.Models 
+{ 
+ public class StudentContext : DbContext 
+ { 
+ public StudentContext() 
+ : base("StudentConnection") 
+ { 
+ } 
+ public DbSet<Student> Students 
+ { 
+ get; 
+ set; 
+ } 
+ } 
+} 
+
+
+3)Right-click Models folder.
+Select:
+Add → Class
+Name:
+StudentContext.cs
+Write:
+using System.Data.Entity;
+namespace StudentCRUD.Models
+{
+public class StudentContext : DbContext
+{
+public StudentContext()
+: base("StudentConnection")
+{
+}
+public DbSet<Student> Students
+{
+get;
+set;
+}
+}
+}
+
+
